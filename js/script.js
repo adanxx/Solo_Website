@@ -154,3 +154,22 @@ $(function () {
 
     })
  });
+
+/**
+  * Google -Map
+**/
+
+$(window).on('load', function(){
+
+   //Map Variable
+   var addressString = 'Rådhuspladsen 1, 1599 København';
+   var myLating = {lat:55.675860, lng:12.568480}
+    
+   // The map, centered at Uluru
+   var map = new google.maps.Map(
+         document.getElementById('map'), {zoom: 11, center: myLating});
+   // The marker, positioned at Uluru
+   var marker = new google.maps.Marker({position: myLating, map: map});
+   
+
+})
